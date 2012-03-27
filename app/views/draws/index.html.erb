@@ -1,0 +1,22 @@
+<h1> draw_something_cheat </h1>
+<%= form_for @draw, :url => {:controller=>'draws', :action=>'get_answer'}, :remote => true, "data-type" => :json, :html =>{ :id => 'main_form' } do|f| %> 
+  <br />
+  输入字符_insert the giving letters: <br />
+  <%= f.text_field :letters, :placeholder => 'example: acjvsamn', :autocomplete => 'off' %><br />
+  <%= f.label '输入答案字数_insert the number of answer：' %> <br />
+  <%= f.text_field :count, :placeholder => 'example: 3', :autocomplete => 'off' %><br />
+  <%= f.submit '确定' %>
+<%end%>
+<br />
+<br />
+<br />
+<div id='jas' ></div>
+
+<br />
+<br />
+<br />
+访问量(visit): <span id="visit" style="color:orange"><%=@counter%></span>; <%= link_to '源代码(source)', 'https://github.com/reducm/drawsomething_cheat' %>
+
+
+  
+
