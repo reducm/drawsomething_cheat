@@ -140,6 +140,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.32)
+    uglifier (1.2.3)
+      execjs (>= 0.3.0)
+      multi_json (>= 1.0.2)
     whenever (0.7.3)
       activesupport (>= 2.3.4)
       chronic (~> 0.6.3)
@@ -168,4 +171,5 @@ DEPENDENCIES
   sass-rails (>= 3.2)
   spork (~> 1.0rc)
   spork-rails
+  uglifier
   whenever

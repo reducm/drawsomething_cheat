@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 20.miniutes do 
+every 3.hours do 
   runner "Counter.save_visit"
 end

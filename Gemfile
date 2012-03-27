@@ -19,6 +19,7 @@ end
 
 gem 'jquery-rails'
 gem 'whenever'
+gem 'uglifier'
 
 group :development, :test do
   gem 'rspec-rails'

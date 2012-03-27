@@ -8,9 +8,10 @@ change your database information in this file,and then
    
     rake db:migrate
 
-after database migration, run the script/insert_dic.rb, and i already put a dictionary text in this folder name **"hanying_done.txt"**,you could build your own dic too. the Draw model needs two properties : *english* and *chinese*,just mod that
+after database migration, run the script/insert_dic.rb, and i already put a dictionary text in this folder name **"hanying_done.txt"**,you could build your own dic too. the Draw model needs two properties : *english* and *chinese*,just mod that,and remmber to change thedatabase config in insert_dic.rb too
 
-    ruby script/insert_dic.rb
+    cd script
+    ruby insert_dic.rb
 
 this apps requires **redis**, you could change your redis config in application.rb, i used $redis to be the global variable
 
