@@ -12,14 +12,26 @@ class Draw < ActiveRecord::Base
     end
     temp_map = {}
     letters_arr = letters.split('')
+
     temp_keys.each do|t| 
       tt = t.split('')
-      next if (letters_arr - (letters_arr - tt)).length < tt.length #筛选走子集有相同的字符而超集没有
+      temp_arr = letters_arr.clone
+      result = true
+      tt.each do|word|
+        if i = temp_arr.index(word)
+          temp_arr.delete_at(i)
+        else
+          result = false
+        end
+      end
+      next unless result
       temp_map[t] = $redis.get t
     end
+
     temp_map
   end
-
+  
+  private
   def getKeys(count)
     count = count.to_i
     if $redis.get('jas')

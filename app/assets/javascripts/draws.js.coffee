@@ -13,8 +13,8 @@ $('#main_form').live('ajax:success',(event,data)->
       if k != 'visit_count'
         str+= "<br /> #{k} : #{v}"
 
-    $('#draw_count').val('')
-    $('#draw_letters').val('')
+#    $('#draw_count').val('')
+ #   $('#draw_letters').val('')
     jas.html(str)
   else
     jas.html('所给条件没有返回结果 @_@...<br /> no result @_@...')
